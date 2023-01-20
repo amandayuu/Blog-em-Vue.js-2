@@ -1,24 +1,15 @@
 <template>
   <div class="container">
-    <!-- <div class="item posts">
-      <div class="header">
-        <span class="title">
-          Posts
-        </span>
-      </div>
-    </div> -->
-    
-    <PostView />
-    <PostForm />
+    <BaseForm />
   </div>
 </template>
 <script>
-import PostForm from '../components/PostForm.vue'
-import PostView from '../components/PostView.vue'
-
+import BaseForm from '@/components/BaseForm.vue';
 export default {
   name: "PostsPage",
-  components: { PostForm, PostView },
+  components: {
+    BaseForm
+  }
 };
 
 </script>

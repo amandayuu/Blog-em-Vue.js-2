@@ -1,19 +1,32 @@
 <template>
   <div>
-    <input
-      class="input-component"
-      placeholder="Título"/>
+    <input 
+      class="input-component" 
+      :placeholder="placeholder"
+      :value="value"
+      @input="$emit('input', $event.target.value)"
+    >
   </div>
 </template>
 <script>
 export default {
-  name: 'BaseInput'
+  name: 'BaseInput',
+  props: {
+    placeholder: {
+      type: String,
+      required: true
+    },
+    value: {
+      type: String,
+      default: ''
+    }
+  }
 }
 </script>
 <style lang="scss">
 .input-component {
   height: 40px;
   width: 230px;
-  margin: 20px 5px 10px 5px;
+  margin: 10px 5px;
 }
 </style>

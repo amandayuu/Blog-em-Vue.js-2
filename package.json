@@ -29,13 +29,19 @@
       "node": true
     },
     "extends": [
+      "plugin:vue/base",
       "plugin:vue/essential",
+      "plugin:vue/strongly-recommended",
       "eslint:recommended"
     ],
     "parserOptions": {
       "parser": "@babel/eslint-parser"
     },
-    "rules": {}
+    "rules": {
+      "vue/attributes-order": "error",
+      "vue/component-tags-order": "error",
+      "vue/max-attributes-per-line": "error"
+    }
   },
   "browserslist": [
     "> 1%",

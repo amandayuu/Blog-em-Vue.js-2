@@ -3,6 +3,8 @@
     <textarea
       class="teste"
       :placeholder="placeholder"
+      :value="value"
+      @input="$emit('input', $event.target.value)"
     />
   </div>
 </template>
@@ -13,6 +15,10 @@
       placeholder: {
         type: String,
         required: true
+      },
+      value: {
+        type: String,
+        default: ''
       }
     }
   }

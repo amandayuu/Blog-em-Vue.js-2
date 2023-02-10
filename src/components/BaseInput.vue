@@ -28,5 +28,7 @@ export default {
   height: 40px;
   width: 230px;
   margin: 10px 5px;
+  border: 1px solid #939393;
+  border-radius: 5px;
 }
 </style>
